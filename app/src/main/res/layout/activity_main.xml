@@ -6,32 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.tms.viewbindingan12.views.CircleView
-        android:layout_width="120dp"
+    <com.tms.viewbindingan12.views.CircleProgressView
+        android:id="@+id/progress"
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/progressValue"
+        android:layout_width="240dp"
         android:layout_height="120dp"
-        app:circleRadius="80dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.tms.viewbindingan12.views.CustomTextView
-        android:id="@+id/reversed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello world!"
-        android:textSize="24sp"
-        app:isReversed="true"
+        android:layout_marginBottom="32dp"
+        android:textAlignment="center"
+        android:textSize="56sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.tms.viewbindingan12.views.CustomTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello world!"
-        android:textSize="24sp"
-        app:isReflected="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/reversed" />
+        tools:text="56" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

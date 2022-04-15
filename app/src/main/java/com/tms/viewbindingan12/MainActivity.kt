@@ -18,6 +18,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
-        binding.reversed.isReversed = true
+        with(binding) {
+            progress.setOnClickListener {
+                progress.startAnimation(progressValue.text.toString().toFloat())
+            }
+        }
     }
 }
